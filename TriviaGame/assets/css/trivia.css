@@ -1,0 +1,30 @@
+
+body {
+	 
+    background-color: burlywood;
+ 
+
+	 
+}
+ 
+
+.text-muted {
+	color:#f6f6f6;
+}
+
+.last-seconds{
+  color: red;
+}
+
+.option{
+  margin: 15px;
+}
+
+.container {
+ 
+	 font-size: 22px; 
+	 background: green; 
+	 margin-left: 0 auto;
+	 margin-top: 10%;
+	 color: #f6f6f6;
+}
