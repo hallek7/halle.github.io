@@ -1,7 +1,7 @@
 
 body {
 	 
-    background-color: burlywood;
+    background-image:url(../images/OooCean.jpg);
  
 
 	 
@@ -23,8 +23,11 @@ body {
 .container {
  
 	 font-size: 22px; 
-	 background: green; 
+	  
 	 margin-left: 0 auto;
 	 margin-top: 10%;
 	 color: #f6f6f6;
+}
+.jumbotron{
+	background-color:navy;
 }
