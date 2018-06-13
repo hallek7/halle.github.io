@@ -109,19 +109,19 @@
         trivia.unanswered++;
         trivia.result = false;
         clearInterval(trivia.timerId);
-        resultId = setTimeout(trivia.guessResult, 1000);
-        $('#results').html('<h3>Out of time! The answer was '+ Object.values(trivia.answers)[trivia.currentSet] +'</h3>');
+        resultId = setTimeout(trivia.guessResult, 3000);
+        $('#results').html('<h3> Time Up! The answer was '+ Object.values(trivia.answers)[trivia.currentSet] +'</h3>');
       }
       // if all the questions have been shown end the game, show results
       else if(trivia.currentSet === Object.keys(trivia.questions).length){
         
         // adds results of game (correct, incorrect, unanswered) to the page
         $('#results')
-          .html('<h3>Thank you for playing!</h3>'+
+          .html('<h3>Well Done!</h3>'+
           '<p>Correct: '+ trivia.correct +'</p>'+
           '<p>Incorrect: '+ trivia.incorrect +'</p>'+
           '<p>Unaswered: '+ trivia.unanswered +'</p>'+
-          '<p>Please play again!</p>');
+          '<p> You May again!</p>');
         
         // hide game sction
         $('#game').hide();
@@ -142,23 +142,24 @@
       
       // if the text of the option picked matches the answer of the current question, increment correct
       if($(this).text() === currentAnswer){
+        
         // turn button green for correct
         $(this).addClass('btn-success').removeClass('btn-info');
-        
         trivia.correct++;
         clearInterval(trivia.timerId);
         resultId = setTimeout(trivia.guessResult, 3000);
-        $('#results').html('<h3>Correct Answer!</h3>');
+        $('#results').html('<h3>Correct!</h3>');
       }
       // else the user picked the wrong option, increment incorrect
       else{
+
         // turn button clicked red for incorrect
         $(this).addClass('btn-danger').removeClass('btn-info');
         
         trivia.incorrect++;
         clearInterval(trivia.timerId);
         resultId = setTimeout(trivia.guessResult, 3000);
-        $('#results').html('<h3>Better luck next time! '+ currentAnswer +'</h3>');
+        $('#results').html('<h3> Wrong!' + currentAnswer +'</h3>');
       }
       
     },

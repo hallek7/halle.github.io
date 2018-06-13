@@ -2,12 +2,8 @@
 body {
 	 
     background-image:url(../images/OooCean.jpg);
- 
-
-	 
 }
  
-
 .text-muted {
 	color:#f6f6f6;
 }
@@ -23,11 +19,14 @@ body {
 .container {
  
 	 font-size: 22px; 
-	  
+	
 	 margin-left: 0 auto;
-	 margin-top: 10%;
+	 margin-top: 5%;
 	 color: #f6f6f6;
 }
 .jumbotron{
-	background-color:navy;
+	background-color:teal;
+}
+h1 {
+	color:blue;
 }
