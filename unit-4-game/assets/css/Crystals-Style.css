@@ -1,0 +1,99 @@
+   
+ 
+ body {
+    background-image: url(../images/atmosphere.jpg);
+    background-size: auto;
+}
+/* 
+.jumbotron {
+
+   background-color: orange;
+   color:black;
+   float: center;
+   margin-left: 30%;
+} */
+
+ 
+.instructions{
+   background-color:teal;
+   margin: 10px;
+   width: 60%  
+  
+}
+
+div{
+   border: solid 2px yellowgreen;
+   padding: 30px;
+}
+ span{
+   font-weight: bold;
+   text-align: right;
+}
+.h1{
+   font-size: 25px;
+}
+.ol{
+   list-style: decimal inside; 
+   font-size: 20%;
+ 
+}
+.h3 {
+    list-style: decimal inside; 
+    font-size: 0px;
+    float: center;
+ } 
+  #urFinalScore {
+      background-color:#cddc39;
+ }
+/* Specfic Elements*/
+ 
+.header{
+   width: 100%;
+    text-align : center ;  
+    color:yellowgreen;
+    background-color:purple;
+}
+/* Classes */
+ .winsAndLosses {
+   float: center;
+   width: 25%;
+   height: 60px;
+    text-align: 10px;
+    background-color:#00aa59;
+}
+   
+
+.urTotalScore{
+   
+   background-color: #00aa59; 
+      
+}
+
+#urFinalScore {
+    margin-top: 0%auto;
+}
+.images{
+    margin-top:10px;
+    margin-bottom:5px;
+   background-color: #00aa59; 
+ 
+  
+}
+.crystal{
+   height: 190px;
+   width: 185px;
+   padding-right: 30px;
+   padding-left: 40px;
+}
+.instructions{
+    margin-left: 300px;
+}
+
+ .footer {
+     text-align: center;
+     margin-top:10px;
+     width: 100%;  
+     color:peachpuff;
+     background-color: black;
+       }
+ 

@@ -1,0 +1,79 @@
+  
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"> 
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel ="stylesheet" href="assets/css/Crystal-Rest.css"> 
+      <link rel ="stylesheet" href="assets/css/Crystals-Style.css"> 
+  
+  </head>
+ 
+  <body>
+    
+      <div class="header"> 
+          
+      <h1> Crystal Games </h1> 
+       
+      </div>
+       
+    <div class="instructions">
+        <h3><u>Rules of The Game </u></h3>
+      </br>
+      <div id="ol">
+      <h4> <li> You will be given a random number at the start of the game </li> </h4> <br> 
+       <h4><li> Click on a crystal, to add a specific amount of points to your total score.</li> <br> </h4>
+       <h4> <li> You win the game by matching your total score to the random number.</li> <br> </h4>
+       <h4><li>You lose the game if your total score goes above the random number.</li> <br> </h4>
+        <h4><li>The value of each crystal is hidden from you until you click on it.</li> <br> </h4>
+        <h4>  <li>Each time when the game starts, the game will change the values of each crystal.</li></h4> 
+      </ol> 
+    </div> 
+
+ 
+ <div class="NumToWin" >
+   <h2> Number To Score
+     <span id="randomNumber"> </span>
+   </h2>
+ </div>
+ <div class="winAndLoss"> 
+    <h2> Wins: 
+      <span id="numWin"> </span> 
+       <br>
+      Losses: 
+      <span id = "numLoss"> </span>
+    </h2>
+ </div>
+ 
+ <div class="images"> 
+        <!-- ====================================== -->
+     <img src="assets/images/img1.jpg" class="crystal"id="crystalOne">
+     
+    <img src="assets/images/img2.jpg" class="crystal" id="crystalTwo">
+    
+    <img src="assets/images/img3.jpg" class="crystal" id="crystalTree"> 
+    
+    <img src="assets/images/img4.jpg" class="crystal" id="crystalFor">
+     </div> 
+
+     <div class="urTotalScore"> 
+       <h2> Your total Score is:
+       <span id="urFinalScore"> </span>
+       </h2>
+     </div>
+     <!-- Added link to Javascript-->
+  </div>
+</div>
+  <div class="footer">
+      <b> <p>Good Luck!</p> </b>
+      
+    
+ <script type ="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"> </script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"> </script>
+
+
+ </body>
+</html>
