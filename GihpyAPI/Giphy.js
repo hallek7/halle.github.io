@@ -21,7 +21,7 @@ $(document).ready(function () {
         // Event listener for all button elements                      // FlrFMH8xKHQNU4qGyeizWTxATOhBXsnb
                                                                      
         console.log(queryURL);
-            // Performing our AJAX GET request
+            // Performing  AJAX GET request
             $.ajax({
                 url: queryURL,
                 method: "GET"
