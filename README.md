@@ -1,7 +1,7 @@
 # hallek7-hallek7.github.io
  this io has the following links 
  
- This is the main/Home Page  
+ This is My Main Portfolio  Page  
 https://hallek7.github.io/hallek7-hallek7.github.io/May12Assignment/index.html
  
 trivia game
