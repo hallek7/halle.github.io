@@ -73,16 +73,19 @@ var checkAndBuy = function () {
             .then(function (answer) {
                 var chosenId = answer.itemId - 1
                 var chosenProduct = res[chosenId]
-                var chosenQuantity = answer.Quantity
+                var chosenQuantity = answer.howManyUnits
                 /// when quantiy is low restock quantity 
+                   console.log("id",chosenId);
+                   console.log("produts",chosenProduct);
+                   console.log("quantity",chosenQuantity);
                 if (chosenQuantity < res[chosenId].stock_quantity) {
-                    console.log("Your total for " + "(" + answer.Quantity + ")" + " - " + res[chosenId].product_name + " is: " + res[chosenId].price.toFixed() * chosenQuantity);
+                    console.log("Your total for: "  + "(" + chosenProduct.item_name + ")"  + " is: " + res[chosenId].price.toFixed() * chosenQuantity);
                     connection.query("UPDATE products SET ? WHERE ?", [{
                         stock_quantity: res[chosenId].stock_quantity - chosenQuantity
                     }, {
                         id: res[chosenId].id
                     }], function (err, res) {
-                        //console.log(err);
+                        //console.log(err);c
                         checkAndBuy();
                     });
                 } else {
