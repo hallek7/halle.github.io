@@ -27,9 +27,9 @@
     <h3>
       <strong>About You</strong>
     </h3>
-    <input id="name" type="text" class="validate" required>
     <h4>Name (Required)</h4>
-      
+    <input id="name" type="text" class="validate" required>
+      <h4> Enter Photo</h4>
     <input id="photo" type="text" class="validate" required>
     
 
@@ -188,7 +188,7 @@
     <div class="modal-content">
       <h4>Meet Your New Friend</h4>
       <h5 id="matchName"></h5>
-      <img id="matchPic" src="./friend1.jpeg" alt="friend1" width = 250px>
+      <img id="matchPic" alt="friend2" width = 250px>
     </div>
   <div class="modal-footer">
     <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Done</a>
@@ -221,7 +221,7 @@
               //creates a new friend from the values submitted
               var newFriend = {
                   name: $('#name').val().trim(),
-                  profilePic: $('#photo').val().trim(),
+                  photo: $('#photo').val().trim(),
                   scores: [
                       $('#q1').val(),
                       $('#q2').val(),

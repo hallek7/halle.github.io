@@ -20,6 +20,7 @@ module.exports = function(app){
       var scoresDiff = 0;
       //run through scores to compare friends
       for(var j=0; j<newFriendScores.length; j++){
+        //paresInit takes strings turns into numbers 
         scoresDiff += (Math.abs(parseInt(friendList[i].scores[j]) - parseInt(newFriendScores[j])));
       }
 
