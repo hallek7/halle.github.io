@@ -3,12 +3,16 @@ li {
 	margin: 15px;
 	background:#1176b9;
 	list-style: none;
+	font-size: 25px;
+	 
+
   }
   
   ul {
 	  list-style: none;
+	  font-size: 15px;
   }
-  
+   
   .label {
 	font-weight: bold;
   }
@@ -48,6 +52,9 @@ li {
   
   .btn-primary {
 	  border-radius: 15px;
+	  font-size: 20px;
+	  color:orange;
+
   }
   
   html, body{
@@ -65,12 +72,13 @@ li {
 	  margin: 0;
 	  padding: 0;
 	  font-family: exo, sans-serif;
-	  color:white;
-  }
+	    color:orange;
+   }
   
   .footer {
 	  text-align: center;
 	  color:lime;
+	  text-emphasis-color: green;
    }
   .wrapper {
 	  height: 100%; 
@@ -87,6 +95,6 @@ li {
 	display: block;
 	position: absolute;
 	background-color: rgba(0,0,0,0.6);
-	color: #fff;
+	color:orange;
 	padding: 0.5em;
   }

@@ -36,7 +36,7 @@
 
 	    <div class="col-sm-6">
 
-			<h2>Burgers That Have Been Eaten!</h2>
+			<h2>Burgers You Have Been Eaten!</h2>
 			
 			  {{#each burgers}}
 			    {{#if this.devoured}}
@@ -55,17 +55,14 @@
 
 	<div class="row">
 	    <div class="center col-sm-12">
-
-			<h2>Add A Burger!</h2>
-
 			<form class="create-update-form" action="/" method="POST">
 
 			  <div class="form-group">
-			    <p>Enter a burger you want to eat and click the submit.</p>
+			    <h2>Enter a burger you want to eat and click submit.</h2>
 			    <input type="text" id="ca" name="burger_name">
 			  </div>
 			  
-			  <button class="btn-primary" type="submit">Submit Order</button>
+			   <button class="btn-primary" type="submit">  Submit Order </button>  
 			</form>
 
 	    </div>
