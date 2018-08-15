@@ -77,9 +77,11 @@ li {
   
   .footer {
 	  text-align: center;
-	  color:lime;
 	  text-emphasis-color: green;
    }
+   #newcolor {
+	   color:black;
+     }
   .wrapper {
 	  height: 100%; 
 	  width: 100%; 
