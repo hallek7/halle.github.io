@@ -1,0 +1,9 @@
+.container-fluid {
+    margin:15 px; 
+    background:#012236;
+}
+#header {
+    color:blue;
+    text-align: center;
+    background: #012236;
+}
