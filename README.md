@@ -17,3 +17,5 @@ Gif Assignment
 https://hallek7.github.io/hallek7-hallek7.github.io/GihpyAPI/Index.html
 
  
+https://hallek7.github.io/hallek7-hallek7.github.io/GihpyAPI/Index.html
+Dev10-Program/Halle-Thompson-prework/HTML_BasicCSS_Assessment/index.html
