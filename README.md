@@ -1,11 +1,10 @@
 # hallek7-hallek7.github.io
- this io has the following links 
- 
  University of MN Bootcamp Apps 05/2018 - 10/2018
- This is My Main Portfolio  Page  
+ 
+ Main Portfolio  Page  
 https://hallek7.github.io/hallek7-hallek7.github.io/May12Assignment/index.html
  
-trivia game
+Trivia game
 https://hallek7.github.io/hallek7-hallek7.github.io/TriviaGame/trivia.html
 
 Train Schdedule 
