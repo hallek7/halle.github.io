@@ -19,5 +19,5 @@ https://hallek7.github.io/hallek7-hallek7.github.io/GihpyAPI/Index.html
 
 
  Genesis10 Dev10 Apps 04/2020 
- basic HTML and CSS App 
+ 1. basic HTML and CSS App 
 https://hallek7.github.io/hallek7-hallek7.github.io/Dev10-Program/Halle-Thompson-prework/HTML_BasicCSS_Assessment/index.html
