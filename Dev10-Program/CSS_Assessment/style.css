@@ -10,11 +10,48 @@
 }
 
 .footer {
-  position: relative;
-  margin: auto;
-  bottom: auto;
+  position: fixed;
+  left: 0;
+  bottom: 0;
   width: 100%;
+  background-color: #1082ec;
+  color: white;
   text-align: center;
-  background-color: rgb(69, 158, 231);
-  color: wheat;
+  margin-top: 10px;
+  padding-top: 3px;
+  padding-bottom: 2px;
+}
+.box1 {
+  width: 30%;
+  height: 300px;
+  border: 2px solid gray;
+  background-color: #6cca1f;
+  float: left;
+  padding-right: 100px;
+  padding-left: 40px;
+  margin-top: 20px;
+  margin-bottom: 3px;
+  margin-left: 30px;
+  margin-right: 70px;
+}
+
+.box2 {
+  width: 20%;
+  height: 300px;
+  border: 2px solid gray;
+  background-color: #138ebe;
+  float: right;
+  padding-right: 10px;
+  padding-left: 40px;
+
+  margin-bottom: 80px;
+  margin-top: 20px;
+  margin-left: 90px;
+  margin-right: 70px;
+}
+#txt1,
+#txt2 {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 80px;
 }
