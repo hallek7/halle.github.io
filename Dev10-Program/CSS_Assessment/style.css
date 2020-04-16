@@ -23,7 +23,7 @@
 }
 .box1 {
   width: 30%;
-  height: 300px;
+  height: 500px;
   border: 2px solid gray;
   background-color: #6cca1f;
   float: left;
@@ -37,7 +37,7 @@
 
 .box2 {
   width: 20%;
-  height: 300px;
+  height: 500px;
   border: 2px solid gray;
   background-color: #138ebe;
   float: right;
