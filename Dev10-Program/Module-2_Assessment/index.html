@@ -1,13 +1,10 @@
-  
 <!DOCTYPE html>
 <html>
+
 <head>
-    
  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
     <!-- Linking Bootstrap -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -23,19 +20,49 @@
   <!-- Jumptron -->
 <div class="container">
   <div class="jumbotron">
-    <h1>Bootstrap Tutorial</h1>      
+    <h1>Word Guess Game</h1>      
   </div>
   </div>
 
 
+  <main class="container">
+    </div>
+        <table class="game-section">
+            <thead>
+                <tr>
+                    <th colspan="2"><span class="gameTitle"> Guess Which County</span>
+                     <hr>
+                        <img id="winner" src="./assets/images/trivia-night.png" alt="trivia"/>
+                        <img id="loser" src="./assets/images/React.jpg" alt="react" />
+                        <h1 id="pressKeyToRetry">Press Any Key to Try Again!</h1>
+                    </th>
+                </tr>
+            </thead>  
+            <tbody>
+
+             <tbody>
+                <tr>
+                    <td class="hint"></td>
+                    <td><h3 style="padding-bottom:5px;">
+                        <u>Press ANY Key To Start!</u></h3>
+                        <h4>Wins:</h4>  <div id="gameWins"></div>
+                        <h4>Current Word:</h4> <div id="currentWord"></div>
+                        <h4>Losses:</h4>  <div id="gameLosses"></div>
+                        <h4 style="padding-top:10px;">Guesses Left:</h4>  <div id="guessLeft"></div>
+                        <h4>All Guesses:</h4>  <div id="userGuess"></div>
+                    </td>
+                </tr>
+            </tbody>      
+        </table>
+    </main>    
 
 
-<footer class="footer">
-            <div class="container">
-            </div>
-    </footer>
+
+
+<footer class="footer"><h5> @ Copy 2020 Halle T </h5></footer>
     <!-- Linking JS -->
-    <script type="text/javascript" src="./assets/javascript/.."></script>    
+     <script type="text/javascript" src="./assets/javascript/game.js"></script>   
+
     <script>
         startGame();
         refreshScreen();
