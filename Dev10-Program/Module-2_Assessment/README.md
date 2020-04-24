@@ -1,4 +1,2 @@
-game.js 
-1. declear vars
-2. start the game 
-3. grab a random number from the country array   
+the theme of this game is to guess a country name 
+Used  key events to listen for the letters that      players will type. 

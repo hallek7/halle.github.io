@@ -5,9 +5,18 @@ body {
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 100px;
     font-family: 'Flavors', cursive;
     color: lightcoral;
+}
+
+th {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hint {
+    font-family: 'Flavors', cursive;
+    font-size: 100px;
 }
 
 .header {

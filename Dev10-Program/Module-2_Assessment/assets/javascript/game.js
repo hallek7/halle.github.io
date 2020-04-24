@@ -97,26 +97,26 @@ function startGame() {
         $('.hint').html("<img src='./assets/images/hiWay.jpg' width='300'/>");
 
     } else if (countryNames[randomPick] == countryNames[2]) {
-        $('.hint').html("<img src='./assets/images/bike.jpg' width='300'/>");
+        $('.hint').html("<img src='./assets/images/LA.jpg' width='300'/>");
 
     } else if (countryNames[randomPick] == countryNames[3]) {
-        $('.hint').html("<img src='./assets/images/hiWay.jpg' width='300'/>");
+        $('.hint').html("<img src='./assets/images/car.jpg' width='300'/>");
     } else if (countryNames[randomPick] == countryNames[4]) {
-        $('.hint').html("<img src='./assets/images/hiWay.jpg' width='300'/>")
+        $('.hint').html("<img src='./assets/images/sky.jpg' width='300'/>")
 
     } else if (countryNames[randomPick] == countryNames[5]) {
-        $('.hint').html("<img src='./assets/images/hiWay.jpg' width='300'/>");
+        $('.hint').html("<img src='./assets/images/utah.jpg' width='300'/>");
 
     } else if (countryNames[randomPick] == countryNames[6]) {
         $('.hint').html("<img src='./assets/images/house.jpg' width='300'/>");
 
     } else if (countryNames[randomPick] == countryNames[7]) {
-        $('.hint').html("<img src='./assets/images/hiWay.jpg' width='300'/>");
+        $('.hint').html("<img src='./assets/images/egypt.jpg' width='300'/>");
     } else if (countryNames[randomPick] == countryNames[8]) {
-        $('.hint').html("<img src='./assets/images/city.jpg' width='300'/>");
+        $('.hint').html("<img src='./assets/images/shore.jpg' width='300'/>");
 
     } else if (countryNames[randomPick] == countryNames[9]) {
-        $('.hint').html("<img src='./assets/images/hiWay.jpg' width='300'/>");
+        $('.hint').html("<img src='./assets/images/homes.jpg' width='300'/>");
 
     } else {
         $('.hint').text('None of The Above');
