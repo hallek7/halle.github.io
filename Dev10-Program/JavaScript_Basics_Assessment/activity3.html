@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> JS Activity 3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<h1 style = "text-align:center;"> <u> JS Activity Three </u>  </h1>
+<div style = "margin-left: 80px; text-align:center; padding-top:20px;"> 
+<h2> <u>JavaScript Arrays and Loops: </u></h2>
+<h2> 1. Start off by creating an array with three student names. </h2>
+<h2> 2.Create a loop that will prompt the user for three more names.</h2>
+<h2> 3. After every user input, store the new name into the array.  </h2>
+<h2> 4. Create a new loop that will iterate through the array and console log each element of the array.</h2>
+</div> 
+
+<script> 
+//Activity 3: JavaScript Arrays and Loops:
+//---------------------------------------
+
+// 1 . Start off by creating an array with three student names.
+const studName = ['John', 'Joe', 'Mohamed'];
+
+// 2 . Create a loop that will prompt the user for three more names.
+for (let i = 0; i < 3; i++) {
+  let moreStudent1 = prompt('enter name');
+ studName.push(moreStudent1);
+
+// 3 . After every user input, store the new name into the array
+//const newName=  studName[i];
+ 
+}
+
+// 4 . Create a new loop that will iterate through the array and console log each element of the array.
+for (let i = 0; i < studName.length; i++) {
+console.log(studName[i]);
+}
+</script>
+
+
+<footer style = "text-align:center; margin-top:550px; border-top:solid green;"> 
+<h4> JS Basic Assessment for DEV10 - Halle 2020 </h4>
+</footer>
+
+
+</body>
+</html>

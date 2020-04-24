@@ -4,6 +4,12 @@ body {
     width: 100%;
 }
 
+h1 {
+    font-size: 80px;
+    font-family: 'Flavors', cursive;
+    color: lightcoral;
+}
+
 .header {
     background: url(../images/oceans.jpg);
     border-bottom: 8px solid gray;
