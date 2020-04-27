@@ -1,57 +1,84 @@
-.topnav {
-  float: center;
-  display: block;
-  color: #12e212;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  background-color: rgb(69, 158, 231);
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #1082ec;
-  color: white;
-  text-align: center;
-  margin-top: 10px;
-  padding-top: 3px;
-  padding-bottom: 2px;
-}
-.box1 {
-  width: 30%;
-  height: 500px;
-  border: 2px solid gray;
-  background-color: #6cca1f;
-  float: left;
-  padding-right: 100px;
-  padding-left: 40px;
-  margin-top: 20px;
-  margin-bottom: 3px;
-  margin-left: 30px;
-  margin-right: 70px;
-}
-
-.box2 {
-  width: 20%;
-  height: 500px;
-  border: 2px solid gray;
-  background-color: #138ebe;
-  float: right;
-  padding-right: 10px;
-  padding-left: 40px;
-
-  margin-bottom: 80px;
-  margin-top: 20px;
-  margin-left: 90px;
-  margin-right: 70px;
-}
-#txt1,
-#txt2 {
-  text-align: center;
-  margin-top: 60px;
-  padding-top: 80px;
-}
+        .topnav {
+            float: center;
+            display: block;
+            color: #12e212;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            background-color: rgb(69, 158, 231);
+        }
+        
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #1082ec;
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+            padding-top: 3px;
+            padding-bottom: 2px;
+        }
+        
+        .box1 {
+            width: 30%;
+            height: 500px;
+            border: 2px solid gray;
+            background-color: #e6e7a7;
+            float: left;
+            padding-right: 100px;
+            padding-left: 40px;
+            margin-top: 30px;
+            margin-bottom: 7px;
+            margin-left: 40px;
+        }
+        
+        h1,
+        .footer {
+            font-size: 25px;
+        }
+        
+        .box2 {
+            width: 20%;
+            height: 500px;
+            border: 2px solid gray;
+            background-color: #138ebe;
+            float: right;
+            padding-right: 10px;
+            padding-left: 40px;
+            margin-bottom: 80px;
+            margin-top: 30px;
+            margin-left: 90px;
+            margin-right: 50px;
+        }
+        
+        #txt1,
+        #txt2 {
+            text-align: center;
+            margin-top: 200px;
+            padding-right: 25px;
+            font-size: 30px;
+        }
+        
+        #txt1 {
+            padding-left: 60px;
+        }
+        
+        @media only screen and (max-width:900px) {
+            /* For tablets: */
+            .box2,
+            .box1 {
+                width: 100%;
+                padding: 0;
+            }
+            @media only screen and (max-width:500px) {
+                /* For mobile phones: */
+                .box1,
+                .box2 {
+                    width: 80%;
+                    padding: 0;
+                }
+            }
+        }
