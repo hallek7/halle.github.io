@@ -28,7 +28,7 @@ function refreshScreen() {
 };
 
 function restartGame() { //after each win/loss 
-    countryNames = ["Mexico", "US", "Egypt", "Ethiopia", "Jordan", "Haiti", "Canada", "Morocco", "England", "South Africa", "France", "Italy", "Turkey"];
+    countryNames = ["Mexico", "US", "Egypt", "Ethiopia", "Jordan", "Haiti", "Canada", "Morocco", "England", "France", "Italy", "Turkey"];
     totalGuesses = 8; // number of tries
     wordGuessed = []; // This will be the word we actually build to match the current word
     allGuesses = [];

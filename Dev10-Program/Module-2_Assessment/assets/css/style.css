@@ -4,10 +4,11 @@ body {
     width: 100%;
 }
 
-h1 {
+h1,
+.gameTitle {
     font-size: 100px;
     font-family: 'Flavors', cursive;
-    color: lightcoral;
+    color: #ffffff;
 }
 
 th {
@@ -63,11 +64,6 @@ main {
     margin: auto;
 }
 
-.gameTitle {
-    font-size: 2em;
-    color: aliceblue;
-}
-
 #currentWord {
     letter-spacing: 10px;
     font-size: 1.5em;
@@ -81,4 +77,14 @@ main {
 .game-section td {
     border: 2px dotted rgb(35, 180, 132);
     width: 1%;
+}
+
+.jumbotron {
+    background: url("../images/splash.jpg");
+}
+
+@media screen and (min-width: 576px) {
+    .jumbotron {
+        padding: 4em 2rem;
+    }
 }
