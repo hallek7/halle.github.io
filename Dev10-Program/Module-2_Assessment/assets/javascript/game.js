@@ -1,210 +1,107 @@
-// set up variables 
-var countryNames = ["Mexico", "US", "Egypt", "Ethiopia", "Jordan", "Haiti", "Canada", "Morocco", "England", "France", "Italy", "Turkey"];
-var totalGuesses = 8; // number of tries
-var randomPick; // array number the machine choose randomly
-var wordGuessed = []; // This will be the word we actually build to match the current word
-var allGuesses = [];
-var guessLeft = 8; // How many tries the player has left
-var finishedGame = false; // Flag for 'press any key to try again'     
-var wins = 0; // # of wins
-var losses = 0; //# of losses
+ $(document).ready(function() {
+     var countryNames = ["france", "italy", "egypt", "ethiopia", "south africa", "turkey", "us", "england", "germany", "greece", "mexico", "india", "jordan", "morocco", "spain", "brazil", "ecuador"];
+
+     const maxGuess = 10;
+     var pauseGame = false;
+     var guessedLetters = [];
+     var guessedWord = [];
+     var wordMatch = "";
+     var numOfGuess = "";
+     var wins = 0;
+
+     resetGame();
+
+     // Wait for key press
+     document.onkeypress = function(event) {
+         // Make sure key pressed is an alpha character
+         if (isAlpha(event.key) && !pauseGame) {
+             checkForLetter(event.key.toUpperCase());
+         }
+     }
 
 
-function refreshScreen() {
-    document.getElementById("gameWins").innerHTML = wins;
-    document.getElementById("gameLosses").innerHTML = losses;
-    //whatever word user enters 
+     // Check if letter is in word & process
+     function checkForLetter(letter) {
+         var foundLetter = false;
+         //*****var correctSound = document.createElement("audio");
+         //*****var wrongSound = document.createElement("audio");
+         //*****correctSound.setAttribute("src", "/assets/audio/right.mp3");
+         //*****wrongSound.setAttribute("src", "/assets/audio/wrong.mp3");
 
-    var guessedWordTxt = ""; // users guess 
-    for (var i = 0; i < guessedWordTxt.length; i++) {
-        // if  user picks the right letter 
-        wordGuess += wordGuessed[i];
-    }
+         // Search string for letter
+         for (var i = 0, j = wordMatch.length; i < j; i++) {
+             if (letter === wordMatch[i]) {
+                 guessedWord[i] = letter;
+                 foundLetter = true;
+                 // *****correctSound.play();
+                 // If guessing word matches random word
+                 if (guessedWord.join("") === wordMatch) {
+                     // Increment # of wins
+                     wins++;
+                     pauseGame = true;
+                     updateDisplay();
+                     setTimeout(resetGame, 5000);
+                 }
+             }
+         }
 
-    //update guesses, word, and letters entered by joining the letters 
-    document.getElementById("currentWord").innerHTML = wordGuessed.join('');
-    document.getElementById("guessLeft").innerHTML = guessLeft;
-    document.getElementById("userGuess").innerHTML = allGuesses.join(' , ');
-};
+         if (!foundLetter) {
+             //*****wrongSound.play()
 
-function restartGame() { //after each win/loss 
-    countryNames = ["Mexico", "US", "Egypt", "Ethiopia", "Jordan", "Haiti", "Canada", "Morocco", "England", "France", "Italy", "Turkey"];
-    totalGuesses = 8; // number of tries
-    wordGuessed = []; // This will be the word we actually build to match the current word
-    allGuesses = [];
-    guessLeft = 8; // How many tries the player has left
-    finishedGame = false; // Flag for 'press any key to try again'   
-    startGame()
+             // Check if inccorrect guess is already on the list
+             if (!guessedLetters.includes(letter)) {
+                 // Add incorrect letter to guessed letter list
+                 guessedLetters.push(letter)
+                     // Decrement the number of remaining guesses
+                 numOfGuess--;
+             }
+             if (numOfGuess === 0) {
+                 // Display the answer/word before reseting game
+                 guessedWord = wordMatch.split()
+                 pauseGame = true;
+                 setTimeout(resetGame, 5000)
+             }
+         }
 
-};
-// start the game
-function startGame() {
-    //guess letter 
-    function makeGuess(letter) {
-        var actual = countryNames[randomPick]
-        var result = wordGuessed
-        var foundLetter = false;
+         updateDisplay()
 
-        if (allGuesses.includes(letter)) {
-            return
-        } else {
-            allGuesses.push(letter)
-        }
+     }
+     // Check in keypressed is between A-Z or a-z
+     function isAlpha(ch) {
+         return /^[A-Z]$/i.test(ch);
+     }
 
-        for (var i = 0; i < actual.length; i++) {
-            if (event.key.toLowerCase() === actual[i].toLowerCase()) {
-                foundLetter = true
-                if (i === 0) {
+     function resetGame() {
+         numOfGuess = maxGuess;
+         pauseGame = false;
 
-                    result[i] = event.key.toUpperCase()
-                } else {
-                    result[i] = event.key.toLowerCase()
-                }
-            }
-        };
+         // Get a new word
+         wordMatch = countryNames[Math.floor(Math.random() * countryNames.length)]
+             //console.log(wordMatch)
 
-        if (!foundLetter) {
-            if (guessLeft === 0) {
-                restartGame()
-            } else {
-                guessLeft--;
+         // Reset word arrays
+         guessedLetters = []
+         guessedWord = []
 
-            }
-        }
+         // Reset the guessed word
+         for (var i = 0, j = wordMatch.length; i < j; i++) {
+             // Put a space instead of an underscore between multi word "words"
+             if (wordMatch[i] === " ") {
+                 guessedWord.push(" ")
+             } else {
+                 guessedWord.push("_")
+             }
+         }
 
+         // Update the Display
+         updateDisplay();
+     }
 
+     function updateDisplay() {
+         document.getElementById("totalWins").innerText = wins;
+         document.getElementById("currentWord").innerText = guessedWord.join("");
+         document.getElementById("guessesLeft").innerText = numOfGuess;
+         document.getElementById("guessedLetters").innerText = guessedLetters.join(" ");
+     }
 
-    };
-
-
-    guessLeft = totalGuesses;
-    //take  random number from country  array
-    randomPick = Math.floor(Math.random() * (countryNames.length));
-
-
-    //query the table data images 
-    if (countryNames[randomPick] == countryNames[0]) {
-        $('.hint').html("<img src='./assets/images/SoCal.jpg'/>");
-
-    } else if (countryNames[randomPick] == countryNames[1]) {
-        $('.hint').html("<img src='./assets/images/hiWay.jpg'/>");
-
-    } else if (countryNames[randomPick] == countryNames[2]) {
-        $('.hint').html("<img src='./assets/images/LA.jpg'/>");
-
-    } else if (countryNames[randomPick] == countryNames[3]) {
-        $('.hint').html("<img src='./assets/images/car.jpg'/>");
-    } else if (countryNames[randomPick] == countryNames[4]) {
-        $('.hint').html("<img src='./assets/images/sky.jpg'/>")
-
-    } else if (countryNames[randomPick] == countryNames[5]) {
-        $('.hint').html("<img src='./assets/images/utah.jpg'/>");
-
-    } else if (countryNames[randomPick] == countryNames[6]) {
-        $('.hint').html("<img src='./assets/images/house.jpg'/>");
-
-    } else if (countryNames[randomPick] == countryNames[7]) {
-        $('.hint').html("<img src='./assets/images/egypt.jpg'/>");
-    } else if (countryNames[randomPick] == countryNames[8]) {
-        $('.hint').html("<img src='./assets/images/shore.jpg'/>");
-
-    } else if (countryNames[randomPick] == countryNames[9]) {
-        $('.hint').html("<img src='./assets/images/homes.jpg'/>");
-
-    } else if (countryNames[randomPick] == countryNames[9]) {
-        $('.hint').html("<img src='./assets/images/ethi.jpg'/>");
-
-
-
-    } else {
-        $('.hint').text('None of The Above');
-    }
-
-    // Clear out arrays
-    userGuess = [];
-    wordGuessed = [];
-
-
-    //  Update and display on the HTML Page using 2nd function 
-
-    //build the word with blanks
-    for (var i = 0; i < countryNames[randomPick].length; i++) {
-        wordGuessed.push("_"); // prints guessed words  from DOM
-        //grab id from DOM, winner,loser and title pressKeyToRetry
-        document.getElementById("pressKeyToRetry").style.cssText = "display:none";
-        document.getElementById("loser").style.cssText = "display:none";
-        document.getElementById("winner").style.cssText = "display:none";
-        // refresh  the current page
-        refreshScreen();
-    };
-
-
-
-    //compare letters entered to the word being guessed 
-    function evaluateGuess(letter) {
-        var position = [];
-        for (var i = 0; i < countryNames[randomPick].length; i++);
-        if (countryNames[randomPick][i] === letter) {
-            position.push(i)
-
-        }
-        // when user reached max guess letter decrement 
-        if (position <= 0) {
-            guessLeft--;
-
-        } else {
-            for (var i = 0; i < position.length; i++) {
-                wordGuessed[position[i]] = letter;
-            }
-        }
-    };
-
-    //check if all letters have been entered.
-
-    function checkWin() {
-
-        if (wordGuessed.indexOf("_") == -1) {
-            // if guessed word is corrrect then 
-            document.getElementById("winner").style.cssText = "display:block";
-            document.getElementById("pressKeyToRetry").style.cssText = "display:block";
-            wins++; // increment towards the end of the word 
-
-            $('.hint').text('You Won!!!')
-                // wins++;
-            finishedGame = true; // and user wins 
-        }
-    };
-
-    //check if the user is out of guesses
-    function checkLoss() {
-        if (guessLeft <= 0) {
-            document.getElementById("loser").style.cssText = "display:block";
-            document.getElementById("pressKeyToRetry").style.cssText = "display:block";
-            $('.hint').text('None of The Above')
-            losses++;
-            finishedGame = true;
-
-        }
-    };
-
-    // Event listener when user hits a key 
-    document.onkeydown = function(event) {
-
-        //if the game is finished, restart it.
-        if (finishedGame) {
-
-            restartGame();
-
-            finishedGame = false;
-        } else // Check to make sure a-z was pressed.
-        {
-            if (event.keyCode >= 65 && event.keyCode < 90) {
-                // keySound.play();
-                makeGuess(event.key.toUpperCase());
-                refreshScreen();
-                checkWin();
-                checkLoss();
-            }
-        }
-    };
-}; //close start function
+ });

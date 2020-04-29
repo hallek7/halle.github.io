@@ -1,75 +1,66 @@
 <!DOCTYPE html>
 <html>
-
 <head>
- <title>Word Guess Game</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Linking Bootstrap -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Flavors&display=swap" rel="stylesheet">
-    <!-- Linking jQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <!-- Linking CSS Reset-->
-    <!--<link rel="stylesheet" type="text/css" href="assets/css/reset.css">-->
-    <!-- Linking CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<title>Word Guess Game</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Linking Bootstrap -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Flavors&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    
+<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 </head>
+
+<header>
+<div class="jumbotron">
+<h1 id = "wordGuess">Word Guess Game: Countries</h1>    
+</div>  
+</header>  
+
+
+<main class="container">
+<table class="game-section">
+
+<thead>
+<tr>
+<th colspan="2">  
+<hr>
+<h1 id="pressKeyToPlay">Press Any Key to Play</h1>
+</th>
+</tr>
+</thead> 
+
+
+<tbody>
+<tr>
+<td> 
+<h4> Total Wins:</h4>  <div id="totalWins"></div>
+    <h4> Current Word:</h4> <div id="currentWord"></div>
+<h4 style="padding-top:10px;">Guesses Left:</h4>  <div id="guessesLeft"></div>
+<h4> Letters Guesses:</h4>  <div id="guessedLetters"></div>
+</td>
+</tr>
+</tbody>   
+
+
+</table>
+</main>    
+
+
+
+<!-- Scripts -->
  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>  
 
-  <!-- Jumptron -->
-<div class="container">
-  <div class="jumbotron">
-    <h1>Word Guess Game:</h1>      
-    <span class="gameTitle">Countries</span>
-  </div>
-  </div> 
-
-
-  <main class="container">
-    </div>
-        <table class="game-section">
-            <thead>
-                <tr>
-                    <th colspan="2">
-                     <hr>
-                        <img id="winner" src="./assets/images/you-win.jpg" alt="winner"/>
-                        <img id="loser" src="./assets/images/get-in-loser.png" alt="loser"/>
-                        <h1 id="pressKeyToRetry">Press Any Key to Play Again!</h1>
-                    </th>
-                </tr>
-            </thead>  
-            <tbody>
-
-             <tbody>
-                <tr>
-                    <td class="hint"></td>
-                    <td><h3 style="padding-bottom:5px;">
-                        <u>Press ANY Key To Start!</u></h3>
-                        <h4>Wins:</h4>  <div id="gameWins"></div>
-                        <h4>Losses:</h4>  <div id="gameLosses"></div>
-                        <h4>Current Word:</h4> <div id="currentWord"></div>
-                        <h4 style="padding-top:10px;">Guesses Left:</h4>  <div id="guessLeft"></div>
-                        <h4>All Guesses:</h4>  <div id="userGuess"></div>
-                    </td>
-                </tr>
-            </tbody>      
-        </table>
-    </main>    
-
-
-
+    <script type="text/javascript" src="./assets/javascript/game.js"></script>  
 
 <footer class="footer"><h5> &copy; Copy 04/2020 Halle T </h5>
 </footer>
-    <!-- Linking JS -->
-     <script type="text/javascript" src="./assets/javascript/game.js"></script>   
-
-    <script>
-        startGame();
-        refreshScreen();
-    </script>
+ 
+ 
 </body>
 </html>
