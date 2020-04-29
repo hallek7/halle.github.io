@@ -40,7 +40,7 @@
                  foundLetter = true;
                  // *****correctSound.play();
                  // If guessing word matches random word
-                 if (guessedWord.join("") === wordMatch) {
+                 if (guessedWord.join("").toLowerCase() === wordMatch) {
                      // Increment # of wins
                      wins++;
                      pauseGame = true;
@@ -61,6 +61,7 @@
                  numOfGuess--;
              }
              if (numOfGuess === 0) {
+                 console.log("64");
                  // Display the answer/word before reseting game
                  guessedWord = wordMatch.split()
                  pauseGame = true;
@@ -97,14 +98,13 @@
                  guessedWord.push("_")
              }
          }
-
          // Update the Display
          updateDisplay();
      }
 
      function updateDisplay() {
          document.getElementById("totalWins").innerText = wins;
-         document.getElementById("currentWord").innerText = guessedWord.join("");
+         document.getElementById("currentWord").innerText = guessedWord.join("").toLowerCase();
          document.getElementById("guessesLeft").innerText = numOfGuess;
          document.getElementById("guessedLetters").innerText = guessedLetters.join(" ");
      }
