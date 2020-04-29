@@ -11,5 +11,5 @@
 
 9. If the user does not guess the correct country name within the allocated number of guesses, then the game will time out and the word being guessed will poulate and the game will reset with   another word randomly pickd for the user to guess. 
  
-Check out the app:
+# Check out the app:
 [Word Guess Game](https://hallek7.github.io/hallek7-hallek7.github.io/Dev10-Program/Module-2_Assessment/index.html)
