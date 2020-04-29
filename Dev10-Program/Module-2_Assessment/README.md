@@ -7,4 +7,4 @@ Number using incrment and decrement method
 6. When the user hits the same letter more than once , there will be no  output and  it doesn't count aganist the # of guesses left.
 7. After the user wins/loses the game, the app   reloads and  another word is         randomly pickd for the user to guess. 
 Check out the app:
-         https://hallek7.github.io/hallek7-hallek7.github.io/Dev10-Program/Module-2_Assessment/index.html
+[Word Guess Game](https://hallek7.github.io/hallek7-hallek7.github.io/Dev10-Program/Module-2_Assessment/index.html)
