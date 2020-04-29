@@ -14,5 +14,5 @@ Module 1 Assessment:  [Portfolio Site]
 
 Module 2 Assessment: 
 [Word Guess Game](https://hallek7.github.io/hallek7-hallek7.github.io/Dev10-Program/Module-2_Assessment/index.html)
-https://hallek7.github.io/hallek7-hallek7.github.io/Dev10-Program/Module-2_Assessment/index.html
+ 
 
