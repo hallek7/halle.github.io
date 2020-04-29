@@ -1,112 +1,106 @@
- $(document).ready(function() {
-     var countryNames = ["france", "italy", "egypt", "ethiopia", "south africa", "turkey", "us", "england", "germany", "greece", "mexico", "india", "jordan", "morocco", "spain", "brazil", "ecuador"];
+$(document).ready(function() {
+    var countryNames = ["france", "italy", "egypt", "ethiopia", "south africa", "turkey", "us", "england", "germany", "greece", "mexico", "india", "jordan", "morocco", "spain", "brazil", "ecuador"];
+    const maxGuess = 10;
+    var pauseGame = false;
+    var guessedLetters = [];
+    var guessedWord = [];
+    var wordMatch = "";
+    var numOfGuess = "";
+    var wins = 0;
 
-     const maxGuess = 10;
-     var pauseGame = false;
-     var guessedLetters = [];
-     var guessedWord = [];
-     var wordMatch = "";
-     var numOfGuess = "";
-     var wins = 0;
+    resetGame();
 
-     resetGame();
+    // Wait for key press
+    document.onkeypress = function(event) {
+        // Make sure key pressed is an alpha character
 
-     // Wait for key press
-     document.onkeypress = function(event) {
-         // Make sure key pressed is an alpha character
-
-         if (isAlpha(event.key) && !pauseGame) {
-             checkForLetter(event.key.toUpperCase());
-         }
-     }
+        if (isAlpha(event.key) && !pauseGame) {
+            checkForLetter(event.key.toUpperCase());
+        }
+    }
 
 
-     // Check if letter is in word & process
-     function checkForLetter(letter) {
+    // Check if letter is in word & process
+    function checkForLetter(letter) {
 
-         var foundLetter = false;
-         //*****var correctSound = document.createElement("audio");
-         //*****var wrongSound = document.createElement("audio");
-         //*****correctSound.setAttribute("src", "/assets/audio/right.mp3");
-         //*****wrongSound.setAttribute("src", "/assets/audio/wrong.mp3");
+        var foundLetter = false;
 
-         // Search string for letter
+        // Search string for letter
 
-         for (var i = 0, j = wordMatch.length; i < j; i++) {
+        for (var i = 0, j = wordMatch.length; i < j; i++) {
 
-             if (letter.toLowerCase() === wordMatch[i]) {
+            if (letter.toLowerCase() === wordMatch[i]) {
 
-                 guessedWord[i] = letter;
-                 foundLetter = true;
-                 // *****correctSound.play();
-                 // If guessing word matches random word
-                 if (guessedWord.join("").toLowerCase() === wordMatch) {
-                     // Increment # of wins
-                     wins++;
-                     pauseGame = true;
-                     updateDisplay();
-                     setTimeout(resetGame, 5000);
-                 }
-             }
-         }
+                guessedWord[i] = letter;
+                foundLetter = true;
 
-         if (!foundLetter) {
-             //*****wrongSound.play()
+                // If guessing word matches random word
+                if (guessedWord.join("").toLowerCase() === wordMatch) {
+                    // Increment # of wins
+                    wins++;
+                    pauseGame = true;
+                    updateDisplay();
+                    setTimeout(resetGame, 5000);
+                }
+            }
+        }
 
-             // Check if inccorrect guess is already on the list
-             if (!guessedLetters.includes(letter)) {
-                 // Add incorrect letter to guessed letter list
-                 guessedLetters.push(letter)
-                     // Decrement the number of remaining guesses
-                 numOfGuess--;
-             }
-             if (numOfGuess === 0) {
-                 console.log("64");
-                 // Display the answer/word before reseting game
-                 guessedWord = wordMatch.split()
-                 pauseGame = true;
-                 setTimeout(resetGame, 5000)
-             }
-         }
+        if (!foundLetter) {
 
-         updateDisplay()
 
-     }
-     // Check in keypressed is between A-Z or a-z
-     function isAlpha(ch) {
-         return /^[A-Z]$/i.test(ch);
-     }
+            // Check if inccorrect guess is already on the list
+            if (!guessedLetters.includes(letter)) {
+                // Add incorrect letter to guessed letter list
+                guessedLetters.push(letter)
+                    // Decrement the number of remaining guesses
+                numOfGuess--;
+            }
+            if (numOfGuess === 0) {
 
-     function resetGame() {
-         numOfGuess = maxGuess;
-         pauseGame = false;
+                // Display the answer/word before reseting game
+                guessedWord = wordMatch.split()
+                pauseGame = true;
+                setTimeout(resetGame, 5000)
+            }
+        }
 
-         // Get a new word
-         wordMatch = countryNames[Math.floor(Math.random() * countryNames.length)]
-             //console.log(wordMatch)
+        updateDisplay()
 
-         // Reset word arrays
-         guessedLetters = []
-         guessedWord = []
+    }
+    // Check in keypressed is between A-Z or a-z
+    function isAlpha(ch) {
+        return /^[A-Z]$/i.test(ch);
+    }
 
-         // Reset the guessed word
-         for (var i = 0, j = wordMatch.length; i < j; i++) {
-             // Put a space instead of an underscore between multi word "words"
-             if (wordMatch[i] === " ") {
-                 guessedWord.push(" ")
-             } else {
-                 guessedWord.push("_")
-             }
-         }
-         // Update the Display
-         updateDisplay();
-     }
+    function resetGame() {
+        numOfGuess = maxGuess;
+        pauseGame = false;
 
-     function updateDisplay() {
-         document.getElementById("totalWins").innerText = wins;
-         document.getElementById("currentWord").innerText = guessedWord.join("").toLowerCase();
-         document.getElementById("guessesLeft").innerText = numOfGuess;
-         document.getElementById("guessedLetters").innerText = guessedLetters.join(" ");
-     }
+        // Get a new word
+        wordMatch = countryNames[Math.floor(Math.random() * countryNames.length)]
 
- });
+        // Reset word arrays
+        guessedLetters = []
+        guessedWord = []
+
+        // Reset the guessed word
+        for (var i = 0, j = wordMatch.length; i < j; i++) {
+            // Put a space instead of an underscore between multi word "words"
+            if (wordMatch[i] === " ") {
+                guessedWord.push(" ")
+            } else {
+                guessedWord.push("_")
+            }
+        }
+        // Update the Display
+        updateDisplay();
+    }
+
+    function updateDisplay() {
+        document.getElementById("totalWins").innerText = wins;
+        document.getElementById("currentWord").innerText = guessedWord.join("").toLowerCase();
+        document.getElementById("guessesLeft").innerText = numOfGuess;
+        document.getElementById("guessedLetters").innerText = guessedLetters.join(" ");
+    }
+
+});
