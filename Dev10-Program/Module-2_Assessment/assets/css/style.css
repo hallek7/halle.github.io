@@ -34,6 +34,10 @@
      margin-bottom: 5%;
  }
  
+ h4 {
+     font-size: 30px;
+ }
+ 
  .footer {
      background-color: #ffffff;
      border-top: 3px solid gray;

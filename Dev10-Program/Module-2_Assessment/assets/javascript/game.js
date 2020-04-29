@@ -14,6 +14,7 @@
      // Wait for key press
      document.onkeypress = function(event) {
          // Make sure key pressed is an alpha character
+
          if (isAlpha(event.key) && !pauseGame) {
              checkForLetter(event.key.toUpperCase());
          }
@@ -22,6 +23,7 @@
 
      // Check if letter is in word & process
      function checkForLetter(letter) {
+
          var foundLetter = false;
          //*****var correctSound = document.createElement("audio");
          //*****var wrongSound = document.createElement("audio");
@@ -29,8 +31,11 @@
          //*****wrongSound.setAttribute("src", "/assets/audio/wrong.mp3");
 
          // Search string for letter
+
          for (var i = 0, j = wordMatch.length; i < j; i++) {
-             if (letter === wordMatch[i]) {
+
+             if (letter.toLowerCase() === wordMatch[i]) {
+
                  guessedWord[i] = letter;
                  foundLetter = true;
                  // *****correctSound.play();
