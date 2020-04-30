@@ -16,7 +16,6 @@
 
 # Activity 2. Variables, Alerts, Prompts, & Conditionals  
  
- JS Activity 2: Variables, Alerts, Prompts, & Conditionals
 1. Grab a user input using a prompt() and store it in a variable.
 2. Add a conditional statement where if the variable's length is
 more than 4, alert the user that their name is greater than 4 characters
