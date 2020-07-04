@@ -18,7 +18,7 @@ https://hallek7.github.io/hallek7-hallek7.github.io/GihpyAPI/Index.html
 
 
  
-## ================= additional 2020  learnings and projects =========== 
+## ========== additional 2019 - 2020  learnings and projects ===========##
 
 Assessment 1:  [Basic HTML and CSS](https://hallek7.github.io/hallek7-hallek7.github.io/Dev10-Program/HTML_BasicCSS_Assessment/index.html)
 
