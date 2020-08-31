@@ -1,22 +1,17 @@
 # hallek7-hallek7.github.io
  University of MN Bootcamp Apps 05/2018 - 10/2018
  
- Main Portfolio  Page  
-https://hallek7.github.io/hallek7-hallek7.github.io/May12Assignment/index.html
+ [Main Portfolio  Page](https://hallek7.github.io/hallek7-hallek7.github.io/May12Assignment/index.html)
  
-Trivia game
-https://hallek7.github.io/hallek7-hallek7.github.io/TriviaGame/trivia.html
+[Trivia game](https://hallek7.github.io/hallek7-hallek7.github.io/TriviaGame/trivia.html)
 
-Train Schdedule 
-https://hallek7.github.io/hallek7-hallek7.github.io/Train%20Schedule/
+[Train Schdedule] (https://hallek7.github.io/hallek7-hallek7.github.io/Train%20Schedule/)
 
-crystal games 
-https://hallek7.github.io/hallek7-hallek7.github.io/unit-4-game/CrystalsGame.html
+[crystal games](https://hallek7.github.io/hallek7-hallek7.github.io/unit-4-game/CrystalsGame.html)
 
-Gif Assignment 
-https://hallek7.github.io/hallek7-hallek7.github.io/GihpyAPI/Index.html
+[Gif Assignment](https://hallek7.github.io/hallek7-hallek7.github.io/GihpyAPI/Index.html)
 
-
+[Burger Menu](https://burgerapp77.herokuapp.com/)
  
 ## ========== additional 2019 - 2020  learnings and projects ===========##
 
