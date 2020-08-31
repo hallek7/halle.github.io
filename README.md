@@ -9,8 +9,6 @@
 
 [crystal games](https://hallek7.github.io/hallek7-hallek7.github.io/unit-4-game/CrystalsGame.html)
 
-[Gif Assignment](https://hallek7.github.io/hallek7-hallek7.github.io/GihpyAPI/Index.html)
-
 [Burger Menu](https://burgerapp77.herokuapp.com/)
  
 ## ========== additional 2019 - 2020  learnings and projects ===========##
