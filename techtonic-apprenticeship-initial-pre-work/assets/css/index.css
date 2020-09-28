@@ -218,7 +218,7 @@
       
       .about-left {
           flex-basis: 40%;
-          background-image: url("https://static.politico.com/dims4/default/c9e1994/2147483647/resize/1160x/quality/90/?url=https%3A%2F%2Fstatic.politico.com%2F25%2Ffb%2Ff246ea5849099d9beef32782e9f8%2F200505-rbg-gty-773.jpg");
+          background-image: url("../img/RBG.jpg"");
           text-decoration: none;
       }
       
@@ -270,6 +270,14 @@
           .about-right {
               flex-basis: 100%;
           }
+           
+             #caption {
+              flex-basis: 100%;
+              padding: 0;
+              position: unset;
+          }
+           
+           
           .about-content li {
               padding: 8px;
           }
